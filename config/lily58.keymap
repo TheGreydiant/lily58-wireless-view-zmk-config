@@ -22,23 +22,23 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                           &kp N6  &kp N7    &kp N8    &kp N9  &kp N0  &kp GRAVE
-&none      &kp Q   &kp W   &kp E     &kp R     &none                            &none   &kp U     &kp I     &kp O   &kp P   &none
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                            &kp H   &kp J     &kp K     &kp L   &kp T   &kp SQT
-&none      &kp Z   &kp X   &kp C     &kp V     &none   &kp COMMA    &kp PERIOD  &none   &kp N     &kp M     &kp B   &kp Y   &none
-                           &kp LALT  &kp LGUI  &mo 2   &kp SPACE    &kp RET     &mo 3   &kp BSPC  &kp RGUI
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4     &kp N5                                    &kp N6           &kp N7     &kp N8         &kp N9  &kp N0  &kp GRAVE
+&none      &kp Q   &kp W   &kp E     &kp R      &none                                     &none            &kp U      &kp I          &kp O   &kp P   &none
+&kp LCTRL  &kp A   &kp S   &kp D     &kp F      &kp G                                     &kp H            &kp J      &kp K          &kp L   &kp T   &kp SQT
+&none      &kp Z   &kp X   &kp C     &kp V      &none           &kp COMMA    &kp PERIOD   &none            &kp N      &kp M          &kp B   &kp Y   &none
+                           &kp LALT  &kp LCTRL  &kp LEFT_SHIFT  &kp SPACE    &lt 1 ENTER  &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        alt_homeN {
+        alt_thumb {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &kp BACKSPACE    &trans  &trans  &trans  &trans
             >;
         };
 
@@ -72,19 +72,28 @@
 
             display-name = "Raise";
             bindings = <
-&trans     &trans  &trans  &trans   &trans   &trans                     &trans       &trans     &trans     &trans    &trans     &trans
-&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-                           &trans   &trans   &trans   &trans    &trans  &trans       &trans     &trans
+&trans  &trans   &trans   &trans   &trans   &trans                     &trans       &trans     &trans     &trans    &trans     &trans
+&none   &kp F11  &kp F12  &kp F13  &kp F14  &kp F15                    &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
+&kp F1  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                    &kp N0       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
+&none   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
+                          &trans   &trans   &trans   &trans    &trans  &trans       &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        extra_2 { status = "reserved"; };
+        layer_7 {
+            display-name = "Raise";
+            bindings = <
+&trans  &trans    &trans        &trans     &trans   &trans                     &trans       &trans     &trans     &trans    &trans     &trans
+&none   &kp F11   &kp UP_ARROW  &kp F13    &kp F14  &kp F15                    &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
+&kp F1  &kp LEFT  &kp DOWN      &kp RIGHT  &kp F9   &kp F10                    &kp N0       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
+&none   &kp F1    &kp F2        &kp F3     &kp F4   &kp F5   &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
+                                &trans     &trans   &trans   &trans    &trans  &trans       &trans     &trans
+            >;
 
-        extra_3 { status = "reserved"; };
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
 
         layer_6 {
             bindings = <
