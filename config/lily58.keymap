@@ -72,11 +72,11 @@
 
             display-name = "Symbol Layer";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans     &trans           &trans    &trans    &trans
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7  &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
-&kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &trans                          &trans  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
-&trans      &trans        &trans        &trans        &kp PERCENT   &mo 3         &trans    &trans  &mo 3   &kp MINUS  &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
-                                        &trans        &trans        &trans        &trans    &trans  &trans  &trans     &trans
+&bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1      &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4                                     &trans        &trans            &trans           &trans                &trans                 &trans
+&none       &kp PLUS       &kp KP_MINUS      &kp KP_MULTIPLY  &kp KP_EQUAL  &none                                            &none         &kp UNDER         &kp F9           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+&trans      &kp LESS_THAN  &kp GREATER_THAN  &kp HASH         &kp SEMI      &trans                                           &kp KP_SLASH  &kp SINGLE_QUOTE  &kp KP_MULTIPLY  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
+&none       &trans         &trans            &trans           &kp PERCENT   &mo 3         &trans            &trans           &mo 3         &kp AMPS          &kp KP_PLUS      &kp LBRC              &kp RBRC               &none
+                                             &trans           &trans        &trans        &kp LEFT_SHIFT    &kp RIGHT_SHIFT  &trans        &trans            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -102,7 +102,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        layer_6 {
+        layer_5 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -112,17 +112,14 @@
             >;
         };
 
-        layer_7 {
-            display-name = "Raise";
+        layer_6 {
             bindings = <
-&trans  &trans    &trans        &trans     &trans   &trans                     &trans       &trans     &trans     &trans    &trans     &trans
-&none   &kp F11   &kp UP_ARROW  &kp F13    &kp F14  &kp F15                    &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp F1  &kp LEFT  &kp DOWN      &kp RIGHT  &kp F9   &kp F10                    &kp N0       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&none   &kp F1    &kp F2        &kp F3     &kp F4   &kp F5   &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-                                &trans     &trans   &trans   &trans    &trans  &trans       &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
