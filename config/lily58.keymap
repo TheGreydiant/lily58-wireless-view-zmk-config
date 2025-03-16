@@ -82,6 +82,42 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        lpar_lbrace: lpar_lbrace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LPAR_LBRACE";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        rpar_rbrace: rpar_rbrace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RPAR_RBRACE";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        lbrack_lthan: lbrack_lthan {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LBRACK_LTHAN";
+            bindings = <&kp LEFT_BRACKET>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        rbrack_gthan: rbrack_gthan {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RBRACK_GTHAN";
+            bindings = <&kp RIGHT_BRACKET>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -117,11 +153,11 @@
 
             display-name = "Symbol Layer";
             bindings = <
-&btclr_bootloader  &bt BT_SEL 0   &bt BT_SEL 1      &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4                                     &trans        &trans            &trans         &trans                &trans                 &bootloader
-&none              &kp PLUS       &kp EQUAL         &kp KP_MULTIPLY  &kp KP_SLASH  &none                                            &none         &kp MINUS         &trans         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&tab_switchtab     &kp LESS_THAN  &kp GREATER_THAN  &kp HASH         &kp COLON     &trans                                           &kp KP_SLASH  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &pgdown_pgup
-&none              &trans         &trans            &trans           &kp PERCENT   &mo 2         &trans            &trans           &mo 2         &trans            &trans         &kp LESS_THAN         &kp GREATER_THAN       &none
-                                                    &trans           &trans        &trans        &kp LEFT_SHIFT    &kp RIGHT_SHIFT  &trans        &trans            &trans
+&btclr_bootloader  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                     &trans     &trans            &trans         &trans                &trans                 &bootloader
+&none              &trans         &kp AT         &kp POUND     &kp CARET     &none                                            &none      &kp KP_SLASH      &kp BACKSLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+&tab_switchtab     &lbrack_lthan  &rbrack_gthan  &kp EQUAL     &kp COLON     &trans                                           &kp MINUS  &kp SINGLE_QUOTE  &kp SEMICOLON  &lpar_lbrace          &rpar_rbrace           &pgdown_pgup
+&none              &trans         &trans         &trans        &kp PERCENT   &mo 2         &trans            &trans           &mo 2      &trans            &trans         &kp LESS_THAN         &kp GREATER_THAN       &none
+                                                 &trans        &trans        &trans        &kp LEFT_SHIFT    &kp RIGHT_SHIFT  &trans     &trans            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
