@@ -55,10 +55,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        enter_fowdel: enter_fowdel {
+        enter_del: enter_del {
             compatible = "zmk,behavior-mod-morph";
-            label = "ENTER_FOWDEL";
-            bindings = <&kp ENTER>, <&kp DELETE>;
+            label = "ENTER_DEL";
+            bindings = <&kp ENTER>, <&kp BACKSPACE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -101,7 +101,7 @@
 &none         &kp Q   &kp W   &kp E         &kp R             &none                                                   &none            &kp U              &kp I          &kp O   &kp P   &none
 &kp LEFT_GUI  &kp A   &kp S   &kp D         &kp F             &kp G                                                   &kp K            &kp J              &kp H          &kp L   &kp T   &kp RIGHT_GUI
 &none         &kp Z   &kp X   &kp C         &kp V             &mo 1           &comma_question    &period_exclamation  &mo 1            &kp N              &kp M          &kp B   &kp Y   &none
-                              &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &space_del         &enter_fowdel        &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp RIGHT_ALT
+                              &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &space_del         &enter_del           &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
