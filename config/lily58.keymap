@@ -54,6 +54,34 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        enter_fowdel: enter_fowdel {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ENTER_FOWDEL";
+            bindings = <&kp ENTER>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        switchtab: switchtab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SWITCHTAB";
+            bindings = <&kp TAB>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT)>;
+        };
+
+        tab_switchtab: tab_switchtab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TAB_SWITCHTAB";
+            bindings = <&kp TAB>, <&switchtab>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -69,11 +97,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC  &kp N1  &kp N2  &kp N3        &kp N4        &kp N5                                              &kp N6     &kp N7         &kp N8         &kp N9  &kp N0  &kp GRAVE
-&none    &kp Q   &kp W   &kp E         &kp R         &none                                               &none      &kp U          &kp I          &kp O   &kp P   &none
-&kp TAB  &kp A   &kp S   &kp D         &kp F         &kp G                                               &kp H      &kp J          &kp K          &kp L   &kp T   &pgdown_pgup
-&none    &kp Z   &kp X   &kp C         &kp V         &mo 1      &comma_question    &period_exclamation   &mo 1      &kp N          &kp M          &kp B   &kp Y   &none
-                         &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &space_del         &mt LEFT_SHIFT ENTER  &kp LCTRL  &kp RIGHT_ALT  &kp RIGHT_GUI
+&kp ESC       &kp N1  &kp N2  &kp N3        &kp N4            &kp N5                                                  &kp N6           &kp N7             &kp N8         &kp N9  &kp N0  &kp GRAVE
+&none         &kp Q   &kp W   &kp E         &kp R             &none                                                   &none            &kp U              &kp I          &kp O   &kp P   &none
+&kp LEFT_GUI  &kp A   &kp S   &kp D         &kp F             &kp G                                                   &kp H            &kp J              &kp K          &kp L   &kp T   &kp RIGHT_GUI
+&none         &kp Z   &kp X   &kp C         &kp V             &mo 1           &comma_question    &period_exclamation  &mo 1            &kp N              &kp M          &kp B   &kp Y   &none
+                              &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &space_del         &enter_fowdel        &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -91,7 +119,7 @@
             bindings = <
 &btclr_bootloader  &bt BT_SEL 0   &bt BT_SEL 1      &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4                                     &trans        &trans            &trans         &trans                &trans                 &bootloader
 &none              &kp PLUS       &kp KP_EQUAL      &kp KP_MULTIPLY  &kp KP_SLASH  &none                                            &none         &kp MINUS         &trans         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&trans             &kp LESS_THAN  &kp GREATER_THAN  &kp HASH         &kp COLON     &trans                                           &kp KP_SLASH  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
+&tab_switchtab     &kp LESS_THAN  &kp GREATER_THAN  &kp HASH         &kp COLON     &trans                                           &kp KP_SLASH  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &pgdown_pgup
 &none              &trans         &trans            &trans           &kp PERCENT   &mo 2         &trans            &trans           &mo 2         &trans            &trans         &kp LESS_THAN         &kp GREATER_THAN       &none
                                                     &trans           &trans        &trans        &kp LEFT_SHIFT    &kp RIGHT_SHIFT  &trans        &trans            &trans
             >;
