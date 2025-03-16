@@ -90,9 +90,9 @@
             display-name = "Symbol Layer";
             bindings = <
 &btclr_bootloader  &bt BT_SEL 0   &bt BT_SEL 1      &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4                                     &trans        &trans            &trans         &trans                &trans                 &bootloader
-&none              &kp PLUS       &kp KP_EQUAL      &kp KP_MULTIPLY  &kp KP_EQUAL  &none                                            &none         &kp MINUS         &kp F9         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&trans             &kp LESS_THAN  &kp GREATER_THAN  &kp HASH         &kp SEMI      &trans                                           &kp KP_SLASH  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
-&none              &trans         &trans            &trans           &kp PERCENT   &mo 2         &trans            &trans           &mo 2         &kp AMPS          &kp KP_PLUS    &kp LESS_THAN         &kp GREATER_THAN       &none
+&none              &kp PLUS       &kp KP_EQUAL      &kp KP_MULTIPLY  &kp KP_SLASH  &none                                            &none         &kp MINUS         &trans         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+&trans             &kp LESS_THAN  &kp GREATER_THAN  &kp HASH         &kp COLON     &trans                                           &kp KP_SLASH  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
+&none              &trans         &trans            &trans           &kp PERCENT   &mo 2         &trans            &trans           &mo 2         &trans            &trans         &kp LESS_THAN         &kp GREATER_THAN       &none
                                                     &trans           &trans        &trans        &kp LEFT_SHIFT    &kp RIGHT_SHIFT  &trans        &trans            &trans
             >;
 
