@@ -46,15 +46,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        btclr_bootloader: btclr_bootloader {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BTCLR_BOOTLOADER";
-            bindings = <&bt BT_CLR>, <&bootloader>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         enter_del: enter_del {
             compatible = "zmk,behavior-mod-morph";
             label = "ENTER_DEL";
@@ -153,11 +144,11 @@
 
             display-name = "Symbol Layer";
             bindings = <
-&btclr_bootloader  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                     &trans     &trans            &trans         &trans                &trans                 &bootloader
-&none              &trans         &kp AT         &kp POUND     &kp CARET     &none                                            &none      &kp KP_SLASH      &kp BACKSLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&tab_switchtab     &lbrack_lthan  &rbrack_gthan  &kp EQUAL     &kp COLON     &trans                                           &kp MINUS  &kp SINGLE_QUOTE  &kp SEMICOLON  &lpar_lbrace          &rpar_rbrace           &pgdown_pgup
-&none              &trans         &trans         &trans        &kp PERCENT   &mo 2         &kp COMMA         &kp PERIOD       &mo 2      &trans            &trans         &kp LESS_THAN         &kp GREATER_THAN       &none
-                                                 &trans        &trans        &trans        &kp LEFT_SHIFT    &kp RIGHT_SHIFT  &trans     &trans            &trans
+&bootloader     &trans         &trans         &trans     &trans         &trans                                        &trans     &trans            &trans         &trans        &trans        &bootloader
+&none           &none          &none          &none      &kp BACKSLASH  &none                                         &none      &kp GRAVE         &none          &none         &none         &none
+&tab_switchtab  &lbrack_lthan  &rbrack_gthan  &kp EQUAL  &kp SLASH      &kp MINUS                                     &kp UNDER  &kp SINGLE_QUOTE  &kp SEMICOLON  &lpar_lbrace  &rpar_rbrace  &pgdown_pgup
+&none           &none          &none          &none      &none          &mo 2      &kp COMMA         &kp PERIOD       &mo 2      &none             &none          &none         &none         &none
+                                              &trans     &trans         &trans     &kp LEFT_SHIFT    &kp RIGHT_SHIFT  &trans     &trans            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -173,11 +164,11 @@
 
             display-name = "Nav/Func. Layer";
             bindings = <
-&trans  &trans    &trans    &trans     &trans  &trans                    &trans  &trans   &trans   &trans   &trans   &trans
-&none   &trans    &kp UP    &trans     &trans  &trans                    &kp F1  &kp F2   &kp F3   &kp F4   &kp F5   &none
-&trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans                    &kp F6  &kp F7   &kp F8   &kp F9   &kp F10  &trans
-&none   &trans    &trans    &trans     &trans  &trans  &trans    &trans  &trans  &kp F11  &kp F12  &kp F13  &kp F14  &none
-                            &trans     &trans  &trans  &trans    &trans  &trans  &trans   &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans   &trans   &trans   &trans   &trans
+&none       &trans        &kp UP        &trans        &trans        &trans                          &kp F1  &kp F2   &kp F3   &kp F4   &kp F5   &none
+&trans      &kp LEFT      &kp DOWN      &kp RIGHT     &trans        &trans                          &kp F6  &kp F7   &kp F8   &kp F9   &kp F10  &trans
+&none       &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &kp F11  &kp F12  &kp F13  &kp F14  &none
+                                        &trans        &trans        &trans        &trans    &trans  &trans  &trans   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
